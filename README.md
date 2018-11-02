@@ -1,0 +1,1 @@
+# BidmadSDK_package
