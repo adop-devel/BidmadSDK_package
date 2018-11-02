@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BidmadSDKTest_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2X-tx-Px1">
+                                <rect key="frame" x="164" y="190" width="49" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Banner"/>
+                                <connections>
+                                    <segue destination="4Pb-Xq-4S4" kind="presentation" id="TGJ-GG-Py7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kno-na-JIU">
+                                <rect key="frame" x="153" y="291" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Interstitial"/>
+                                <connections>
+                                    <segue destination="22b-qo-CmT" kind="presentation" id="KpY-sM-I48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61h-aW-Yqj">
+                                <rect key="frame" x="161" y="382" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reward"/>
+                                <connections>
+                                    <segue destination="h9R-X9-z9l" kind="presentation" id="7or-QI-Vrk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--Interstitial View Controller-->
+        <scene sceneID="a4Q-ta-ssQ">
+            <objects>
+                <viewController id="22b-qo-CmT" customClass="InterstitialViewController" customModule="BidmadSDKTest_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T2P-IE-fiD"/>
+                        <viewControllerLayoutGuide type="bottom" id="agz-WL-mhq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v7c-Nh-9so">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVH-pg-WKC">
+                                <rect key="frame" x="285" y="28" width="71" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Be6-26-ZEA"/>
+                                    <constraint firstAttribute="width" constant="71" id="GcX-Iz-YMf"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="UVH-pg-WKC" id="KJM-xd-IUF">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UVH-pg-WKC" firstAttribute="top" secondItem="T2P-IE-fiD" secondAttribute="bottom" constant="8" id="4HW-hz-y8M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UVH-pg-WKC" secondAttribute="trailing" constant="3" id="h05-9e-xog"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0l-cG-Owm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="933"/>
+        </scene>
+        <!--Banner View Controller-->
+        <scene sceneID="92O-xO-Ajc">
+            <objects>
+                <viewController id="4Pb-Xq-4S4" customClass="BannerViewController" customModule="BidmadSDKTest_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EUH-pe-wE5"/>
+                        <viewControllerLayoutGuide type="bottom" id="eRW-dW-VVk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EHN-Fp-A8e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5W-lT-pg3">
+                                <rect key="frame" x="289" y="28" width="70" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="w5W-lT-pg3" secondAttribute="height" multiplier="7:3" id="rxV-ti-ck7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="4Pb-Xq-4S4" eventType="touchUpInside" id="EIm-bb-JJ1"/>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="w5W-lT-pg3" id="BO4-5R-BNe">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="w5W-lT-pg3" firstAttribute="top" secondItem="EUH-pe-wE5" secondAttribute="bottom" constant="8" id="CIE-bY-42R"/>
+                            <constraint firstItem="w5W-lT-pg3" firstAttribute="trailing" secondItem="EHN-Fp-A8e" secondAttribute="trailingMargin" id="lZ2-Gq-L4W"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2xL-Hs-uRu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--Reward Video View Controller-->
+        <scene sceneID="PBZ-mx-yo4">
+            <objects>
+                <viewController id="h9R-X9-z9l" customClass="RewardVideoViewController" customModule="BidmadSDKTest_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="edT-SV-c1R"/>
+                        <viewControllerLayoutGuide type="bottom" id="zFD-li-Aro"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgg-09-T70">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ul-ag-aB4">
+                                <rect key="frame" x="285" y="28" width="71" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8Yo-13-eiV"/>
+                                    <constraint firstAttribute="width" constant="71" id="goT-Rj-k29"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="popoverPresentation" popoverAnchorView="9Ul-ag-aB4" id="vi2-X9-JqH">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Ul-ag-aB4" secondAttribute="trailing" constant="3" id="pll-87-And"/>
+                            <constraint firstItem="9Ul-ag-aB4" firstAttribute="top" secondItem="edT-SV-c1R" secondAttribute="bottom" constant="8" id="wVw-Vt-CcA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ee3-fC-J63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79" y="946"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="BO4-5R-BNe"/>
+    </inferredMetricsTieBreakers>
+</document>
